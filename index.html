@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<title>Display a map</title>
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' />
+
+		<link href="./main.css" rel='stylesheet'></link>
+	</head>
+	<body>
+
+		<div id='map'></div>
+
+		<img src="./img/about.png" class="about" />
+
+		<div class="method-contain hidden">
+			<div class="method-back"></div>
+			<div class="method">
+				<h3 class="method-title">Methodology</h3>
+
+				<p>This project is a labor of love by <a href="https://twitter.com/DylanMoriarty" target="_blank">Dylan Moriarty.</a></p>
+
+				<p>Zoo address and Red Pandas names come from <a href="https://github.com/wwoast/redpanda-lineage" target="_blank">Red Panda Lineage</a>, a database made by  Justin Fairchild, firefoxpanda88 and daniele.tokyo. It is incomplete, as it looks to be a volunteer effort. That said, it is to date the best resource I could find – and for the U.S. at least seems pretty good.</p>
+
+				<p>The zoo's addresses were geocoded with the <a href="https://www.here.com/">HERE</a> api. The natural habitat area was translated from the <a href="https://www.iucn.org/" target="_blank">International Union for Conservation of Nature and Natural Resources.</a></p>
+
+				<p>The map data comes from <a href="https://www.naturalearthdata.com/" target="_blank">Natural Earth Data</a>. That was then processed with Mapshaper and projected with <a href="https://www.developmentseed.org/dirty-reprojectors-app/" target="_blank">Dirty Reprojectors</a>, hat tip to Development Seed.</p>
+
+				<p>The map is built with <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, and uses Mapbox GL JS to serve up these tiles.</p>
+
+				<p>For more information on Red Pandas, and how we can help keep them around, check out the <a href="https://www.redpandanetwork.org/">Red Panda Network</a>. Or, use this map as intended and go visit your local zoo and support them! Weather is perfect for it.</p>
+			</div>
+		</div>
+
+		<div class="title">
+			<img src="./img/title.png" />
+		</div>
+
+		<div class="zoom-container">
+			<div class="zoom-panda"></div>
+			<div class="zoomin-btn"></div>
+			<div class="zoomout-btn"></div>
+		</div>
+
+<!-- 		<div class="zoomin"></div>
+		<div class="zoomOut"></div>
+		<div class="zoombox"></div>
+ -->
+		<ul class="top-border-container">
+			<li></li>
+			<li></li>
+			<li class="800w"></li>
+			<li class="1000w"></li>
+		</ul>
+
+
+
+
+		<div class="topleft"></div>
+		<div class="topright"></div>
+		<div class="btmleft"></div>
+		<div class="btmright"></div>
+
+		<div class="border-top-container">
+			<div class="border btop"></div>
+		</div>
+
+		<div class="border-bottom-container">
+			<div class="border bbtm"></div>
+		</div>
+
+		<div class="border-left-container">
+			<div class="bordersi blef"></div>
+		</div>
+		<div class="border-right-container">
+			<div class="bordersi brig"></div>
+		</div>
+
+		<script src="./zoodat.js"></script>
+		<script src="./panda-by-zoo.js"></script>
+		<script src="./index.js"></script>
+	 
+		<img src="./img/zoomc.png" class="hidden"/>
+		<img src="./img/zoomh.png" class="hidden"/>
+		<img src="./img/zoomz.png" class="hidden"/>
+
+		<!-- DAAAATA
+			Zoo and Red Panda information from the Red Panda Lineage.
+			Address geocoded via HERE from addresses in Red Panda Lineage dataset.
+			Natural Habitat from the International Union for Conservation of Nature and Natural Resources.
+			General geography from Natural Earth Data.
+			Tiles and map interactivity built with Mapbox GL. Projection made possible thanks to Development Seed's Dirty Reprojectors.
+		-- >
+
+	</body>
+</html>
