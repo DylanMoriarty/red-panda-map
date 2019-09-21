@@ -37,12 +37,15 @@ body {
 
 .mapboxgl-popup-tip {
 	border-top-color: #d58831 !important;
+	border-bottom-color: #d58831 !important;
 	margin-top: -2px;
 }
 
 h3 {
-	margin: 0;
+	margin: 0 0 10px;
 	padding: 0;
+	font-size: 16px;
+	line-height: 16px;
 }
 
 /*			<div class="zoom-panda"></div>
@@ -215,7 +218,7 @@ li { padding: 0; list-style: none; margin: 0; }
 	position: absolute;
 	background-image: url('./img/border-tb.png');
 	background-repeat: horizontal;
-	background-size: 260px;
+	background-size: 262px;
 	height: 60px;
 	width: 100%;
 }
@@ -356,7 +359,8 @@ li { padding: 0; list-style: none; margin: 0; }
 }
 
 .directionSpacing {
-	margin: 0 0 0.25rem;
+	margin: 0 0 10px;
+	font-size: 14px;
 }
 
 a { color: #7e3723; }
